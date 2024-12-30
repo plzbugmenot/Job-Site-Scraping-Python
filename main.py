@@ -4,6 +4,7 @@ import os
 from src.file1 import process_file1
 from src.file2 import process_file2
 from src.file3 import process_file3
+from src.file4 import process_file4
 
 def create_data_directory():
     if not os.path.exists('data'):
@@ -17,6 +18,7 @@ def get_all_data():
     data1 = process_file1()
     data2 = process_file2()
     data3 = process_file3()
+    data4 = process_file4()
     
     # Read from JSON files to verify data
     with open('1.json', 'r') as f:
@@ -25,9 +27,11 @@ def get_all_data():
         data2 = json.load(f)
     with open('3.json', 'r') as f:
         data3 = json.load(f)
+    with open('4.json', 'r') as f:
+        data4 = json.load(f)
     
     # Combine all data
-    all_data = data1 + data2 + data3
+    all_data = data1 + data2 + data3 + data4
     return all_data
 
 def remove_duplicates(data):
