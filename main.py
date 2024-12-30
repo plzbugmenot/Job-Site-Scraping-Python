@@ -58,8 +58,8 @@ def main():
 
     save_processed_data(clean_data)
     save_to_excel(clean_data, 'processed_data.xlsx')
-
-    print(f"\n✨ Data has been processed and saved to processed_data.xlsx")
+    print(f"\n✨ Total jobs scraped: {len(clean_data)}")
+    print(f"✨ Data has been processed and saved to processed_data.xlsx")
 
 if __name__ == "__main__":
     main()
